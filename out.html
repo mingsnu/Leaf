@@ -1,0 +1,131 @@
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" type="text/css" href="all.css">
+  <style type="text/css" ></style>
+</head>
+<h1>Leaf Example</h1>
+
+<h2>Code highlight</h2>
+<div class="highlight"><pre><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;styles/default.css&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;highlight.pack.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span><span class="nx">hljs</span><span class="p">.</span><span class="nx">initHighlightingOnLoad</span><span class="p">();</span><span class="nt">&lt;/script&gt;</span>
+</pre></div>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="s2">&quot;JavaScript syntax highlighting&quot;</span><span class="p">;</span>
+ <span class="nx">alert</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+</pre></div>
+<div class="highlight"><pre><span class="n">s</span> <span class="o">=</span> <span class="s">&quot;Python syntax highlighting&quot;</span>
+ <span class="k">print</span> <span class="n">s</span>
+</pre></div>
+<div class="highlight"><pre>x<span class="o">=</span><span class="m">1</span><span class="o">:</span><span class="m">10</span>
+y<span class="o">=</span>x<span class="o">+</span>nrom<span class="p">(</span><span class="m">10</span><span class="p">)</span>
+plot<span class="p">(</span>x<span class="p">)</span>
+abline<span class="p">(</span>lm<span class="p">(</span>y<span class="o">~</span>x<span class="p">))</span>
+</pre></div>
+
+<pre><code>No language indicated, so no syntax highlighting. 
+ But let&#39;s throw in a &lt;b&gt;tag&lt;/b&gt;.</code></pre>
+
+<h2>List test</h2>
+
+<ul>
+<li>First</li>
+<li>Second</li>
+<li>Third</li>
+</ul>
+
+<h2>Table Test</h2>
+
+<h3>Using html syntax</h3>
+
+<table>
+  <tr>
+    <th>ID</th><th>Name</th><th>Rank</th>
+  </tr>
+  <tr>
+    <td>1</td><td>Tom Preston-Werner</td><td>Awesome</td>
+  </tr>
+  <tr>
+    <td>2</td><td>Albert Einstein</td><td>Nearly as awesome</td>
+  </tr>
+</table>
+
+<h3>EXT_TABLES — Parse <a href="http://michelf.ca/projects/php-markdown/extra/#table">PHP-Markdown tables</a></h3>
+
+<table><thead>
+<tr>
+<th>Tables</th>
+<th align="center">Are</th>
+<th align="right">Cool</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>col 3 is</td>
+<td align="center">right-aligned</td>
+<td align="right">$1600</td>
+</tr>
+<tr>
+<td>col 2 is</td>
+<td align="center">centered</td>
+<td align="right">$12</td>
+</tr>
+<tr>
+<td>zebra stripes</td>
+<td align="center">are neat</td>
+<td align="right">$1</td>
+</tr>
+</tbody></table>
+
+<p>The outer pipes (|) are optional, and you don&#39;t need to make the raw Markdown line up prettily. You can also use inline Markdown.</p>
+
+<table><thead>
+<tr>
+<th>Markdown</th>
+<th>Less</th>
+<th>Pretty</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><em>Still</em></td>
+<td><code>renders</code></td>
+<td><strong>nicely</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Blockquotes are very handy in email to emulate reply text.
+This line is part of the same quote.</p>
+</blockquote>
+
+<h3>Quote</h3>
+
+<blockquote>
+<p>This is a very long line that will still be quoted properly when it wraps. Oh boy let&#39;s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can <em>put</em> <strong>Markdown</strong> into a blockquote. </p>
+</blockquote>
+
+<h3>Reference</h3>
+
+<ol>
+<li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">MMarkdown Cheatsheet</a></li>
+<li><a href="http://misaka.61924.nl">Misaka</a></li>
+<li><a href="http://python-houdini.61924.nl/">Houdini.py</a></li>
+<li><a href="http://pygments.org/">Pygments</a></li>
+</ol>
+
+<h3>TODO:</h3>
+
+<ol>
+<li>Highlight <em>no language</em> code</li>
+<li>Modify the css file</li>
+</ol>
+
+</html>
