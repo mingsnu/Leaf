@@ -1,5 +1,4 @@
 import misaka as m
-import io
 
 import houdini as h
 from pygments import highlight
@@ -7,13 +6,20 @@ from pygments.lexers import get_lexer_by_name
 from pygments.formatters import HtmlFormatter
 
 # Create a custom renderer
-class BleepRenderer(m.HtmlRenderer, m.SmartyPants):
+class LeafRenderer(m.HtmlRenderer, m.SmartyPants):
+    """
+    Define a new 'render'
+    """
+    def __init__(self, **options):
+        super(LeafRenderer, self).__init__()
+        # pass additional optionss to HtmlFormatter
+        self.options = options
     def block_code(self, text, lang):
         if not lang:
             return '\n<pre><code>%s</code></pre>\n' % \
                 h.escape_html(text.strip())
         lexer = get_lexer_by_name(lang, stripall=True)
-        formatter = HtmlFormatter()
+        formatter = HtmlFormatter(**self.options)
         return highlight(text, lexer, formatter)
     def doc_header(self):
         head = """
@@ -32,12 +38,3 @@ class BleepRenderer(m.HtmlRenderer, m.SmartyPants):
         footer = """
 </html>"""
         return footer
-
-# And use the renderer
-renderer = BleepRenderer()
-md = m.Markdown(renderer,
-    extensions=m.EXT_FENCED_CODE | m.EXT_NO_INTRA_EMPHASIS | m.EXT_TABLES )
-
-with io.open('out.html', 'w') as file:
-    with io.open('template.md', 'r') as file1:
-        file.write(md.render(file1.read()))
